@@ -1,9 +1,6 @@
 package com.person.info.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -11,6 +8,8 @@ import java.io.Serializable;
 public class PersonEntity implements Serializable {
 
     @Id
+    @GeneratedValue(generator = "personSeq")
+    @SequenceGenerator(name="personSeq",sequenceName = "seq_person", initialValue = 3)
     @Column(name="ID")
     private Long id;
 

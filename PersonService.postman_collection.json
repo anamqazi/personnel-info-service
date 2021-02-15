@@ -13,7 +13,7 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "pass123",
+							"value": "pass1234",
 							"type": "string"
 						},
 						{
@@ -88,7 +88,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"ABC\",\r\n    \"lastName\": \"XYZ\",\r\n    \"age\": 19,\r\n    \"favouriteColor\": \"orange\"\r\n}",
+					"raw": "{\r\n    \"firstName\": \"ABC_ty\",\r\n    \"lastName\": \"XYZ\",\r\n    \"age\": 19,\r\n    \"favouriteColor\": \"orange\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

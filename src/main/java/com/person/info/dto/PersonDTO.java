@@ -20,6 +20,9 @@ public class PersonDTO {
         this.setId(personEntity.getId());
     }
 
+    public PersonDTO(){
+
+    }
     public String getFirstName() {
         return firstName;
     }
