@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "efd39c04-76a2-47a3-96fd-27963bf45cde",
+		"name": "PersonService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get list of people",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "infouser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "spring.security.user.name",
+						"value": "infouser",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "spring.security.user.password",
+						"value": "pass123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/infoservice/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"infoservice",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "infouser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.security.user.name",
+						"value": "infouser",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "spring.security.user.password",
+						"value": "pass123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"ABC\",\r\n    \"lastName\": \"XYZ\",\r\n    \"age\": 19,\r\n    \"favouriteColor\": \"orange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/infoservice/addPerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"infoservice",
+						"addPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "infouser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.security.user.name",
+						"value": "infouser",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "spring.security.user.password",
+						"value": "pass123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"ABC\",\r\n    \"lastName\": \"XYZ\",\r\n    \"age\": 19,\r\n    \"favouriteColor\": \"orange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/infoservice/updatePerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"infoservice",
+						"updatePerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person By Id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "infouser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.security.user.name",
+						"value": "infouser",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "spring.security.user.password",
+						"value": "pass123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"ABC\",\r\n    \"lastName\": \"XYZ\",\r\n    \"age\": 19,\r\n    \"favouriteColor\": \"orange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/infoservice/deletePerson/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"infoservice",
+						"deletePerson",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -10,12 +10,14 @@ public class PersonDTO {
     private String lastName;
     private int age;
     private String favouriteColor;
+    private Long id;
 
     public PersonDTO(PersonEntity personEntity) {
         this.setFirstName(personEntity.getFirstName());
         this.setLastName(personEntity.getLastName());
         this.setAge(personEntity.getAge());
         this.setFavouriteColor(personEntity.getFavColor());
+        this.setId(personEntity.getId());
     }
 
     public String getFirstName() {
@@ -48,5 +50,13 @@ public class PersonDTO {
 
     public void setFavouriteColor(String favouriteColor) {
         this.favouriteColor = favouriteColor;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

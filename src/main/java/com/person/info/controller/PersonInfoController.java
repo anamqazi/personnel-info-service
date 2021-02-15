@@ -18,8 +18,19 @@ public class PersonInfoController {
     public List retrievePeople() {
         return personInfoService.getPeople();
     }
-    @PostMapping("/people/add")
+
+    @PostMapping("/addPerson")
     public void addPerson(@RequestBody PersonDTO person) {
          personInfoService.addPerson(person);
+    }
+
+    @PostMapping("/updatePerson")
+    public void updatePerson(@RequestBody PersonDTO person) {
+        personInfoService.updatePerson(person);
+    }
+
+    @PostMapping("/deletePerson/{id}")
+    public void deletePerson(@PathVariable Long id) {
+        personInfoService.deletePerson(id);
     }
 }
